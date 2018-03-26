@@ -1,52 +1,36 @@
 # A method to reverse each word in a sentence, in place.
 def reverse_words(my_words)
   # raise NotImplementedError
-  return nil if my_words == nil || my_words.length < 1
+  return nil if my_words == nil
+  return nil if my_words.length < 1
 
   length = my_words.length
-  # print my_words
-  i = 1
-  new_string = ""
-  length.times do
-    new_string << my_words[length - i]
-    i += 1
-  end
-  print new_string
-  # my_words = new_string
-  # print my_words
+
   i = 0
-  length.times do
-    my_words[i] = new_string[i]
-    i += 1
+  # while the index is less than the length of the word
+  while i < length
+    # find the space and determine what to do with it
+    # assign the space to a variable introduce j
+    # while the index is equal to a space
+    while my_words[i] == " "
+      # i += 1
+      j = my_words[i]
+    end
+    # while the index is less than j aka the space
+    # reverse the word
+    while my_words[i] < j
+      # while my_words[i] == " "
+      #   i += 1
+      # end
+      # while my_words[j] == " "
+      temp = my_words[i]
+      my_words[i] == j
+      j = temp
+      i += 1
+      j -= 1
+      # end
+      i  = j + 1
+    end
+    return my_words
   end
-  return my_words
-end
-
-
-
-
-
-
-
-
-
-
-
-
-#   length = my_words.length
-#
-#   i = my_words[length - 1]
-#
-#   length.times do
-#     new_string << i
-#
-#     # if i < j
-#     #   temp = i
-#     #   i = j
-#     #   j = temp
-#     # end
-#   end
-#   # i += 1
-#   my_words = new_string
-#   return my_words
-# end
+end # method
